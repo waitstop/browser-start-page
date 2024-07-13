@@ -4,7 +4,7 @@
   >
     <div class="w-full p-4 max-w-2xl space-y-4">
       <Suspense>
-        <WeatherWidget />
+        <WeatherWidget class="shadow-md" />
         <template #fallback>
           <Icon icon="mingcute:loading-fill" class="text-3xl animate-spin" />
         </template>
@@ -13,7 +13,7 @@
       <div class="flex gap-4 md:justify-between flex-wrap">
         <div v-for="link in links" :key="link.href">
           <a
-            class="bg-white/25 size-16 flex items-center justify-center rounded-md transition-all hover:scale-[1.1] shadow-lg"
+            class="bg-white/25 size-16 flex items-center justify-center rounded-md transition-all hover:scale-[1.1] shadow-md"
             :href="link.href"
           >
             <Icon class="text-3xl" :icon="link.icon" />

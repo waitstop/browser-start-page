@@ -17,7 +17,7 @@ export default async function getWeather(
     params: {
       q: city,
       lang,
-      key: import.meta.env.VITE_WEATHER_API_KEY
+      key: import.meta.env.VITE_WEATHER_API_KEY || localStorage.getItem('WEATHER_API_KEY')
     }
   })
   return response.data
